@@ -1,0 +1,45 @@
+/* ==========================================================================
+  -- Tableable
+========================================================================== */
+
+@import 'row', 'align';
+
+/// Group elements and apply spaces between them
+///
+/// @group Tools
+/// @param {number} $columns [3] - number of columns
+/// @param {pixels} $space [20px] - space in pixels between columns
+/// @example
+/// # use:
+///
+/// tableable();
+/// tableable(3, 20px);
+///
+/// # code:
+///
+/// .className {
+///     @include tableable(3, 20px);
+/// }
+///
+/// # compiled:
+///
+/// .className {
+///   display: flex;
+///   flex-direction: row;
+///   justify-content: space-between;
+///
+///   > * {
+///     width: calc((100% - 40px) / 3);
+///   }
+/// }
+///
+///
+@mixin tableable($columns: 3, $space: 20px) {
+  $space: ($columns - 1) * $space;
+  @include row();
+  @include align(between);
+
+  > * {
+    width: calc((100% - #{$space}) / #{$columns});
+  }
+}

@@ -1,0 +1,22 @@
+/* ==========================================================================
+  -- Markup holder
+  ========================================================================== */
+
+/// Creates an empty block with borders for mockups purposes
+///
+/// @group Objects
+///
+///
+.markup-holder {
+  background: ghostwhite;
+  border: 1px solid gray;
+
+  > .title {
+    text-align: center;
+    font: {
+      weight: normal;
+      size: 18px;
+    }
+    color: gray;
+  }
+}

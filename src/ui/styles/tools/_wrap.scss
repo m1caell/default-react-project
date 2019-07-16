@@ -1,0 +1,34 @@
+/* ==========================================================================
+    -- Wrap
+  ========================================================================== */
+
+/// Applies flex-wrap on elements
+/// @group Tools
+/// @param {boolean} $state [true] - state value
+/// @example
+/// # use:
+///
+/// wrap();
+/// wrap(true);
+/// wrap(false);
+///
+/// # code:
+///
+/// .className {
+///   @include wrap();
+/// }
+///
+/// # compiled:
+///
+/// .className {
+///   flex-wrap: wrap;
+/// }
+///
+///
+@mixin wrap($state: true) {
+  @if $state == true {
+    flex-wrap: wrap;
+  } @else {
+    flex-wrap: nowrap;
+  }
+}

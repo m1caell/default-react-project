@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+    "jsx": "react",
+    "paths": {
+      "app-atoms": ["ui/atoms/index.js"],
+      "app-components": ["ui/components/index.js"],
+      "app-pages": ["ui/pages/index.js"],
+      "app-router": ["router/index.js"],
+      "app-services": ["services/index.js"],
+      "app-constants": ["constants/index.js"],
+      "app-hooks": ["hooks/index.js"],
+      "app-models": ["models/index.js"],
+      "app-modules": ["modules/index.js"],
+      "app-modules/icons": ["modules/icons/index.js"],
+      "app-helpers": ["helpers/index.js"],
+      "app-styles/settings": ["ui/styles/settings/index.js"],
+      "app-styles/tools": ["ui/styles/tools/index.js"]
+    }
+  },
+  "exclude": ["node_modules", "build"]
+}

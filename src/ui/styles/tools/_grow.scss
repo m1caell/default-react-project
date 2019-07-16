@@ -1,0 +1,35 @@
+/* ==========================================================================
+    -- Grow
+  ========================================================================== */
+
+/// Applies flex-grow on elements
+///
+/// @group Tools
+/// @param { boolean } $state [true] - state value
+/// @example
+/// # use:
+///
+/// grow();
+/// grow(true);
+/// grow(false);
+///
+/// # code:
+///
+/// .className {
+///   @include grow();
+/// }
+///
+/// # compiled:
+///
+/// .className {
+///   flex-grow: 1;
+/// }
+///
+///
+@mixin grow($state: true) {
+  @if $state == true {
+    flex-grow: 1;
+  } @else {
+    flex-grow: 0;
+  }
+}

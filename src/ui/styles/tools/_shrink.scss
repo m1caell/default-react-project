@@ -1,0 +1,35 @@
+/* ==========================================================================
+    -- Shrink
+  ========================================================================== */
+
+/// Applies flex-shrink on elements
+///
+/// @group Tools
+/// @param { boolean } $state [true] - state value
+/// @example
+/// # use:
+///
+/// shrink();
+/// shrink(true);
+/// shrink(false);
+///
+/// # code:
+///
+/// .className {
+///     @include shrink();
+/// }
+///
+/// # compiled:
+///
+/// .className {
+///     flex-shrink: 1;
+/// }
+///
+///
+@mixin shrink($state: true) {
+  @if $state == true {
+    flex-shrink: 1;
+  } @else {
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,39 @@
+/* ==========================================================================
+  -- Col
+========================================================================== */
+
+/// Applies flex-columns on elements
+///
+/// @group Tools
+/// @param {boolean} $state [true] - state value
+/// @example
+/// # use:
+///
+/// col();
+/// col(true);
+/// col(false);
+///
+/// # code:
+///
+/// .className {
+///   @include col();
+/// }
+///
+///
+/// # compiled:
+///
+/// .className {
+///   display: flex;
+///   flex-direction: column;
+/// }
+///
+///
+@mixin col($state: true) {
+  @if $state == true {
+    display: flex;
+    flex-direction: column;
+  } @else {
+    display: initial;
+    flex-direction: initial;
+  }
+}

@@ -1,0 +1,37 @@
+/* ==========================================================================
+  -- Row
+========================================================================== */
+
+/// Applies flex-rows on elements
+/// @group Tools
+/// @param {boolean} $state [true] - state value
+/// @example
+/// # use:
+///
+/// row();
+/// row(true);
+/// row(false);
+///
+/// # code:
+///
+/// .className {
+///   @include row();
+/// }
+///
+/// # compiled:
+///
+/// .className {
+///   display: flex;
+///   flex-direction: row;
+/// }
+///
+///
+@mixin row($state: true) {
+  @if $state == true {
+    display: flex;
+    flex-direction: row;
+  } @else {
+    display: initial;
+    flex-direction: initial;
+  }
+}

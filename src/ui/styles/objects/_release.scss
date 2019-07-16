@@ -1,0 +1,21 @@
+/* ==========================================================================
+  -- Release
+========================================================================== */
+
+/// Hides elements in the dom
+///
+/// @group Objects
+///
+///
+.release-hide {
+  opacity: 0 !important;
+}
+
+/// Removes elements from dom
+///
+/// @group Objects
+///
+///
+.release-remove {
+  display: none !important;
+}

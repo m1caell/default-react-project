@@ -1,0 +1,63 @@
+/* ==========================================================================
+    -- Align
+  ========================================================================== */
+
+/// Applies flex alignment on elements
+///
+/// @group Tools
+/// @param { directional } $position [center] - Align direction ( top | middle | bottom | left | center | right )
+/// @example
+/// # use:
+///
+/// align();
+/// align(top);
+/// align(middle);
+/// align(bottom);
+/// align(left);
+/// align(center);
+/// align(right);
+/// align(around);
+/// align(between);
+/// align(evenly);
+///
+/// # code:
+///
+/// .className {
+///     @include align(top);
+/// }
+///
+/// # compiled:
+///
+/// .className {
+///     align-items: flex-start;
+/// }
+///
+///
+@mixin align($position: center) {
+  // Vertical
+  @if $position == top {
+    align-items: flex-start;
+  } @else if $position == middle {
+    align-items: center;
+  } @else if $position == bottom {
+    align-items: flex-end;
+  }
+
+  // Horizontal
+  @else if $position == left {
+    justify-content: flex-start;
+  } @else if $position == center {
+    justify-content: center;
+  } @else if $position == right {
+    justify-content: right;
+  }
+
+  // Middle
+  @else if $position == around {
+    justify-content: space-around;
+  } @else if $position == between {
+    justify-content: space-between;
+  } @else if $position == evenly {
+    justify-content: space-evenly;
+  }
+}

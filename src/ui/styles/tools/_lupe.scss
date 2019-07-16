@@ -1,0 +1,34 @@
+/* ==========================================================================
+  -- Lupe
+========================================================================== */
+
+/// Multiply prop values by number
+///
+/// @group Tools
+/// @param {number} $multiplier Number to multiply values
+/// @param {map} $selectors map with props and values
+/// @example
+/// # code
+///
+/// $props: (
+///   font-size: 12px,
+///   padding-left: 10px
+/// );
+///
+/// .className {
+///   @include lupe(0.75, $props);
+/// }
+///
+/// # compiled
+///
+/// .className {
+///   font-size: 9px;
+///   padding-left: 7.5px;
+/// }
+///
+///
+@mixin lupe($multiplier, $selectors) {
+  @each $key, $value in $selectors {
+    #{$key}: $value * $multiplier;
+  }
+}

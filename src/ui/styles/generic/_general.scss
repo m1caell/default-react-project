@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  display: block;
+}
+
+/**
+ * we need to remove the reCAPTCHA badge 
+ * because our layout already show reCAPTCHA branding
+ * in the user flow
+ * https://developers.google.com/recaptcha/docs/faq#id-like-to-hide-the-recaptcha-badge-what-is-allowed
+ */
+.grecaptcha-badge {
+  visibility: hidden;
+}
